@@ -1,0 +1,5 @@
+[2024-04-12 01:54:28,080] 25 root - INFO: Initiating Data Ingestion
+[2024-04-12 01:54:28,108] 36 root - INFO: Data Ingested Successfully
+[2024-04-12 01:54:28,121] 40 root - INFO: Raw Data Saved Successfully at: artifacts\raw.csv
+[2024-04-12 01:54:28,121] 42 root - INFO: Splitting Data into Train and Test
+[2024-04-12 01:54:28,141] 46 root - INFO: Data Split Successfully into Train and Test at: artifacts\train.csv and artifacts\test.csv
