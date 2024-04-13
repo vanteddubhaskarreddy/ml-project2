@@ -1,0 +1,15 @@
+[2024-04-13 01:30:50,780] 26 root - INFO: Initiating Data Ingestion
+[2024-04-13 01:30:50,785] 37 root - INFO: Data Ingested Successfully
+[2024-04-13 01:30:50,791] 41 root - INFO: Raw Data Saved Successfully at: artifacts\raw.csv
+[2024-04-13 01:30:50,791] 43 root - INFO: Splitting Data into Train and Test
+[2024-04-13 01:30:50,797] 47 root - INFO: Data Split Successfully into Train and Test at: artifacts\train.csv and artifacts\test.csv
+[2024-04-13 01:30:50,811] 58 root - INFO: Data Loaded Successfully
+[2024-04-13 01:30:50,811] 27 root - INFO: Initiating Data Transformation
+[2024-04-13 01:30:50,811] 36 root - INFO: Only Numerical Columns are present in the dataset
+[2024-04-13 01:30:50,811] 49 root - INFO: Data Transformation Pipeline Created Successfully
+[2024-04-13 01:30:50,812] 69 root - INFO: Target Column: price_in_thousands
+[2024-04-13 01:30:50,812] 70 root - INFO: Numerical Columns: ['crime_rate', 'zoned_land', 'industry', 'charles_dummy_var', 'nox_conc', 'rooms', 'age', 'distance', 'highways', 'property_tax', 'pt_ratio', 'black_prop', 'lower_status_popu']
+[2024-04-13 01:30:50,813] 77 root - INFO: Data Transformation Started
+[2024-04-13 01:30:50,821] 82 root - INFO: Data Transformed Successfully
+[2024-04-13 01:30:50,821] 87 root - INFO: Data Merged Successfully with Target Column using numpy function np.c_
+[2024-04-13 01:30:50,823] 17 root - INFO: Object Saved Successfully at: artifacts\preprocessor.pkl

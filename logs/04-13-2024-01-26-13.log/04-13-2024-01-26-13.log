@@ -1,0 +1,12 @@
+[2024-04-13 01:26:15,426] 26 root - INFO: Initiating Data Ingestion
+[2024-04-13 01:26:15,426] 37 root - INFO: Data Ingested Successfully
+[2024-04-13 01:26:15,426] 41 root - INFO: Raw Data Saved Successfully at: artifacts\raw.csv
+[2024-04-13 01:26:15,426] 43 root - INFO: Splitting Data into Train and Test
+[2024-04-13 01:26:15,441] 47 root - INFO: Data Split Successfully into Train and Test at: artifacts\train.csv and artifacts\test.csv
+[2024-04-13 01:26:15,457] 58 root - INFO: Data Loaded Successfully
+[2024-04-13 01:26:15,457] 27 root - INFO: Initiating Data Transformation
+[2024-04-13 01:26:15,457] 36 root - INFO: Only Numerical Columns are present in the dataset
+[2024-04-13 01:26:15,457] 49 root - INFO: Data Transformation Pipeline Created Successfully
+[2024-04-13 01:26:15,463] 69 root - INFO: Target Column: price_in_thousands
+[2024-04-13 01:26:15,463] 70 root - INFO: Numerical Columns: ['crime_rate', 'zoned_land', 'industry', 'charles_dummy_var', 'nox_conc', 'rooms', 'age', 'distance', 'highways', 'property_tax', 'pt_ratio', 'black_prop', 'lower_status_popu', 'price_in_thousands']
+[2024-04-13 01:26:15,463] 77 root - INFO: Data Transformation Started

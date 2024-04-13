@@ -3,6 +3,7 @@ import sys
 
 from src.exceptions import CustomException
 from src.logger import logging
+from src.components.data_transformation import DataTransformation
 
 import numpy as np
 import pandas as pd
@@ -54,4 +55,7 @@ class DataIngestion:
 if __name__ == "__main__":
     data_ingestion = DataIngestion()
     train_data_path, test_data_path = data_ingestion.initiate_data_ingestion()
+
+    data_transformation = DataTransformation()
+    train_array, test_array, preprocessor_obj_file_path = data_transformation.initiate_data_transformation(train_data_path, test_data_path)
 
