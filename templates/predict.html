@@ -1,0 +1,124 @@
+<html>
+<head>
+    <style>
+        body {
+            background-color: rgb(251, 143, 240);
+        }
+        
+        .login {
+            background-color: rgb(208, 81, 181);
+            padding: 20px;
+            border-radius: 5px;
+            width: 600px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+        
+        form {
+            margin-top: 20px;
+        }
+        
+        .form-label {
+            color: rgb(0, 0, 0);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 5px;
+        }
+        
+        .btn-primary {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        h2 {
+            text-align: center;
+            color: rgb(0, 0, 0);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <h1>Machine Learning Project 2</h1>
+
+        <form action="{{ url_for('predict')}}" method="post">
+            <h1>
+                <legend>House Price Prediction</legend>
+            </h1>
+            <div class="mb-3">
+                <label class="form-label">Crime Rate (Min: 0.006, Max: 88.976, Avg: 3.613)</label>
+                <input class="form-control" type="number" name="crime_rate" placeholder="Enter Crime Rate" min='0.006' max='88.976' step="0.001" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Zoned Land (Min: 0, Max: 100, Avg: 11.36)</label>
+                <input class="form-control" type="number" name="zoned_land" placeholder="Enter Zoned Land" min='0' max='100' step="0.001" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Industry (Min: 0.46, Max: 27.74, Avg: 11.13)</label>
+                <input class="form-control" type="number" name="industry" placeholder="Enter Industry" min='0.46' max='27.74' step="0.001" required />
+            </div>
+            <!-- Add other blocks here -->
+            <div class="mb-3">
+                <label class="form-label">Charles River Dummy Variable (Min: 0, Max: 1, Avg: 0.069)</label>
+                <input class="form-control" type="number" name="charles_dummy_var" placeholder="Enter Charles River Dummy Variable" min='0' max='1' required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Nitric Oxides Concentration (Min: 0.385, Max: 0.871, Avg: 0.554)</label>
+                <input class="form-control" type="number" name="nox_conc" placeholder="Enter Nitric Oxides Concentration" min='0.385' max='0.871' step="0.001" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Average Number of Rooms (Min: 3.561, Max: 8.78, Avg: 6.284)</label>
+                <input class="form-control" type="number" name="rooms" placeholder="Enter Average Number of Rooms" min='3.561' max='8.78' step="0.001" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Age (Min: 2.9, Max: 100, Avg: 68.57)</label>
+                <input class="form-control" type="number" name="age" placeholder="Enter Age" min='2.9' max='100' required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Distance to Employment Centres (Min: 1.1296, Max: 12.1265, Avg: 3.795)</label>
+                <input class="form-control" type="number" name="distance" placeholder="Enter Distance to Employment Centres" min='1.1296' max='12.1265' step="0.001" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Index of Accessibility to Highways (Min: 1, Max: 24, Avg: 9.549)</label>
+                <input class="form-control" type="number" name="highways" placeholder="Enter Index of Accessibility to Highways" min='1' max='24' required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Property Tax Rate (Min: 187, Max: 711, Avg: 408.237)</label>
+                <input class="form-control" type="number" name="property_tax" placeholder="Enter Property Tax Rate" min='187' max='711' required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Pupil-Teacher Ratio (Min: 12.6, Max: 22, Avg: 18.455)</label>
+                <input class="form-control" type="number" name="pt_ratio" placeholder="Enter Pupil-Teacher Ratio" min='12.6' max='22' step="1" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Proportion of Blacks (Min: 0.32, Max: 396.9, Avg: 356.674)</label>
+                <input class="form-control" type="number" name="black_prop" placeholder="Enter Proportion of Blacks" min='0.32' max='396.9' step="0.001" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Lower Status of the Population (Min: 1.73, Max: 37.97, Avg: 12.653)</label>
+                <input class="form-control" type="number" name="lower_status_popu" placeholder="Enter Lower Status of the Population" min='1.73' max='37.97' step="0.001" required />
+            </div>
+            <div class="mb-3">
+                <input class="btn btn-primary" type="submit" value="Predict House Price" required />
+            </div>
+        </form>
+        <h2>
+            The prediction is {{prediction}}
+        </h2>
+    </div>
+</body>
+</html></div>

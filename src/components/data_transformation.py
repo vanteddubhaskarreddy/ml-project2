@@ -12,6 +12,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import PolynomialFeatures
 
 from dataclasses import dataclass
 
@@ -37,7 +38,8 @@ class DataTransformation:
 
             num_pipeline = Pipeline(steps=[
                 ('imputer', SimpleImputer(strategy='median')),
-                ('standard_scalar', StandardScaler())
+                ('standard_scalar', StandardScaler()),
+                #('poly_features', PolynomialFeatures(degree=2))
             ])
 
             preprocessor = ColumnTransformer(
